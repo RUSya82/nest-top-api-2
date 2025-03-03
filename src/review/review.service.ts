@@ -14,6 +14,6 @@ export class ReviewService {
     return this.reviewModel.create(dto)
   }
   getAll(){
-
+    return this.reviewModel.find();
   }
 }

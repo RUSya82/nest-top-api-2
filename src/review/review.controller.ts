@@ -11,10 +11,16 @@ export class ReviewController {
   @UsePipes(new ValidationPipe())
   @Post('create')
   async create(@Body() dto: CreateReviewDto){
+    console.log('review/create');
     return this.reviewService.create(dto)
   }
   @Get('product/:productId')
   async getByProduct(@Param('productId') productId: string){
 
+  }
+
+  @Get()
+  getAll(){
+    return this.reviewService.getAll();
   }
 }

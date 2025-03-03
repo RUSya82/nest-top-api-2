@@ -3,7 +3,7 @@ import {HydratedDocument} from "mongoose";
 
 export type ProductDocument = HydratedDocument<ProductModel>;
 
-class ProductCharacteristic {
+export class ProductCharacteristic {
   @Prop()
   name: string;
 
