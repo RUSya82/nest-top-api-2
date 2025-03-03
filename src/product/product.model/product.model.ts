@@ -11,10 +11,10 @@ class ProductCharacteristic {
   value: string;
 }
 
-@Schema()
+@Schema({timestamps: true})
 export class ProductModel {
-  @Prop()
-  _id: string;
+  // @Prop()
+  // _id: string;
 
   @Prop()
   image: string;
@@ -35,7 +35,7 @@ export class ProductModel {
   calculatedRating: number;
 
   @Prop()
-  description: number;
+  description: string;
 
   @Prop()
   advantages: string;
