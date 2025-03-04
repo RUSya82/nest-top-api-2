@@ -4,11 +4,13 @@ import { ReviewService } from './review.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ReviewModel, ReviewSchema } from './review.model/review.model';
 import { ProductModel, ProductSchema } from '../product/product.model/product.model';
+import { ProductModule } from '../product/product.module';
 
 @Module({
   controllers: [ReviewController],
   providers: [ReviewService],
   imports: [
+    ProductModule,
     MongooseModule.forFeature([
       {
         name: ReviewModel.name,

@@ -14,6 +14,7 @@ import { ProductModel, ProductSchema } from './product.model/product.model';
         schema: ProductSchema
       }
     ])
-  ]
+  ],
+  exports: [ProductService]
 })
 export class ProductModule {}

@@ -16,4 +16,12 @@ export class ProductService {
   async getAll(){
     return this.productModel.find();
   }
+
+  async delete(id){
+    return this.productModel.findByIdAndDelete(id).exec();
+  }
+
+  async getOne(id){
+    return this.productModel.findById(id);
+  }
 }
