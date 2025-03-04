@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { ProductDocument, ProductModel } from './product.model/product.model';
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 import { CreateProductDto } from './dto/create-product.dto';
 
 @Injectable()
@@ -22,6 +22,6 @@ export class ProductService {
   }
 
   async getOne(id){
-    return this.productModel.findById(id);
+    return this.productModel.findById(new Types.ObjectId(id));
   }
 }
