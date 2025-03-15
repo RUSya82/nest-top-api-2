@@ -18,7 +18,6 @@ export class ReviewController {
   async getByProduct(@Param('productId', IsMongoIdPipe) productId: string){
     return this.reviewService.getByProductId(productId);
   }
-
   @Get()
   getAll(){
     return this.reviewService.getAll();
